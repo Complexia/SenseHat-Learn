@@ -1,8 +1,8 @@
 from sense_hat import SenseHat
 
 class Sensor:
-    def __init__(self, sense):
-        self.__sense = sense
+    def __init__(self):
+        self.__sense = SenseHat()
         self.__x = 0
         self.__y = 0
         self.__z = 0
@@ -13,7 +13,7 @@ class Sensor:
         self.__y = abs(acceleration['y'])
         self.__z = abs(acceleration['z'])
 
-        if self.__x > 1.5 or self.__y > 1.5 or self.__z > 1.5:
+        if self.__x > 1.25 or self.__y > 1.25 or self.__z > 1.25:
             return True
         
         return False
