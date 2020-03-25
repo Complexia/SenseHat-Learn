@@ -7,6 +7,9 @@ class Reader:
 		self.red = (255,0,0)
 
 	def checkComfort(self, temp):
+		blue = (0,0,255)
+		green = (0,255,0)
+		red = (255,0,0)
 		with open('config.json') as json_file:
 			data = json.load(json_file)
 			if temp < data["cold_max"]:
