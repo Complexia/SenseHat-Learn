@@ -19,7 +19,7 @@ def main():
 
 	while True:
 		currentTemp = checkTemp(sense)
-		displayTemp(sense,9,reader)
+		displayTemp(sense,23,reader)
 		sleep(10)
 		sense.clear()
 	
