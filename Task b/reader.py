@@ -1,4 +1,5 @@
 import json
+
 class Reader:
 	def __init__(self):
 		self.blue = (0,0,255)
@@ -6,7 +7,7 @@ class Reader:
 		self.red = (255,0,0)
 
 	def checkComfort(self, temp):
-		with open(config.json) as json_file:
+		with open('config.json') as json_file:
 			data = json.load(json_file)
 			if temp < data[cold_max]:
 				return blue
