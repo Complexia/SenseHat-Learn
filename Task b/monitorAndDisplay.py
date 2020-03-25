@@ -24,4 +24,4 @@ def main():
 		sense.clear()
 	
 
-
+main()
