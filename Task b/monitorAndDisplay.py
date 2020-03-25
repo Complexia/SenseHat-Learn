@@ -9,7 +9,7 @@ def checkTemp(sense):
 def displayTemp(sense, temp, reader):
 	color = reader.checkComfort(temp)
 	temp = round(temp,1)
-	sense.show_message(temp,text_colour=color)
+	sense.show_message(string(temp),text_colour=color)
 
 
 def main():
