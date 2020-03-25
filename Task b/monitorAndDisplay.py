@@ -1,6 +1,6 @@
 from sense_hat import SenseHat
 from time import sleep
-import reader
+from reader import Reader
 
 def checkTemp(sense):
 	temp = sense.get_temperature()
