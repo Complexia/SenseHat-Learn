@@ -1,10 +1,16 @@
 from sense_hat import SenseHat
 from time import sleep
 from reader import Reader
+import subprocess
 
 def checkTemp(sense):
+	cpuTemp = subprocess.check_output("vcgencmd measure_temp", shell=True)
+	array1 = str(cpuTemp).split("=")
+	array2 = array1[1].split("'")
+	cpuTempFloat = float(array2[0])
 	temp = sense.get_temperature()
-	return temp
+	actualTemp = temp - ((cpuTempFloat - temp)/1.4)
+	return actualTemp
 
 def displayTemp(sense, temp, reader):
 	color = reader.checkComfort(temp)
