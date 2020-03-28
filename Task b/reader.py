@@ -9,18 +9,18 @@ class Reader:
 
 	def checkComfort(self, temp):
 		
-		try:
-			with open('config.json') as json_file:
-				data = json.load(json_file)
-				if temp < data["cold_max"]:
-					return blue
-				elif temp >= data["comfortable_min"] and temp < data["comfortable_max"]:
-					return green
-				else:
-					return red
+		##try:
+		with open('config.json') as json_file:
+			data = json.load(json_file)
+			if temp < data["cold_max"]:
+				return blue
+			elif temp >= data["comfortable_min"] and temp < data["comfortable_max"]:
+				return green
+			else:
+				return red
 
-		except:
-			print("Invalid Json format.")
+		##except:
+			##print("Invalid Json format.")
 
 
 		
