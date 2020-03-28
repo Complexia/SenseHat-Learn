@@ -1,7 +1,7 @@
 import json
 
 class Reader:
-	def __init__(self):
+	
 		
 
 	def checkComfort(self, temp):
