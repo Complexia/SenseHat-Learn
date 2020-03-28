@@ -3,7 +3,9 @@ import json
 class Reader:
 
 	def __init__(self):
-	
+		self.blue = (0,0,255)
+		self.green = (0,255,0)
+		self.red = (255,0,0)
 
 	def checkComfort(self, temp):
 		blue = (0,0,255)
