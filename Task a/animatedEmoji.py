@@ -6,7 +6,7 @@ from time import sleep
 def main():
     emoji = Emoji()
     while True:
-        emoji.setColor((0, 255, 0))
+        emoji.setColor((0, 0, 0))
         emoji.display()
         sleep(3)
         emoji.clear()
