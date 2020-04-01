@@ -1,12 +1,15 @@
 from sense_hat import SenseHat
-
+from screens import Screens
 from random import randrange
+from time import sleep
 
 def main():
     emoji = Emoji()
-    # put in a loop and sleep(3) at the end of each iteration
-    emoji.setColor((0, 255, 0))
-    emoji.display()
+    while True:
+        emoji.setColor((0, 255, 0))
+        emoji.display()
+        sleep(3)
+    
 
 class Emoji:
     def __init__(self):
@@ -29,47 +32,6 @@ class Emoji:
         else:
             self.__matrix = Screens.getScreenThree(self.__color)
 
-class Screens():
-    @staticmethod
-    def getScreenOne(c):
-        b = (0, 0, 0)
-        return [
-            c, c, c, c, c, c, c, c,
-            c, b, b, c, c, b, b, c,
-            c, b, b, c, c, b, b, c,
-            c, c, c, c, c, c, c, c,
-            c, b, c, c, c, c, b, c,
-            c, b, b, c, c, b, b, c,
-            c, c, b, b, b, b, c, c,
-            c, c, c, c, c, c, c, c
-        ]
 
-    @staticmethod
-    def getScreenTwo(c):
-        b = (0, 0, 0)
-        return [
-            c, c, c, c, c, c, c, c,
-            c, b, b, c, c, b, b, c,
-            c, c, b, c, c, c, b, c,
-            c, c, c, c, c, c, c, c,
-            c, c, c, c, c, c, c, c,
-            c, b, c, c, c, c, c, c,
-            c, b, b, b, b, b, b, c,
-            c, c, c, c, c, c, c, c
-        ]
-
-    @staticmethod
-    def getScreenThree(c):
-        b = (0, 0, 0)
-        return [
-            c, c, c, c, c, c, c, c,
-            c, c, b, c, c, c, b, c,
-            c, b, c, c, c, b, c, c,
-            c, c, c, c, c, c, c, c,
-            c, c, c, c, c, c, b, c,
-            c, c, b, b, b, b, c, c,
-            c, b, c, c, c, c, c, c,
-            c, c, c, c, c, c, c, c
-        ]
 
 main()

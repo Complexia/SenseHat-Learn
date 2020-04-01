@@ -21,8 +21,6 @@ def displayTemp(sense, temp, reader):
 def main():
 	sense = SenseHat()
 	reader = Reader()
-	
-
 	while True:
 		currentTemp = checkTemp(sense)
 		displayTemp(sense,currentTemp,reader)
