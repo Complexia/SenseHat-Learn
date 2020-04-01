@@ -1,6 +1,5 @@
 from sense_hat import SenseHat
 from screens import Screens
-from random import randrange
 from time import sleep
 
 def main():
@@ -27,16 +26,6 @@ class Emoji:
         #self.__getRandomScreen()
         self.__getScreen()
         self.__sense.set_pixels(self.__matrix)
-
-    #display emojis in random order
-    def __getRandomScreen(self):
-        num = randrange(1, 4)
-        if num == 1:
-            self.__matrix = Screens.getScreenOne(self.__color)
-        elif num == 2:
-            self.__matrix = Screens.getScreenTwo(self.__color)
-        else:
-            self.__matrix = Screens.getScreenThree(self.__color)
 
     #display emojis in order
     def __getScreen(self):
