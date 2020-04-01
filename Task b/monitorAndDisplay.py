@@ -9,11 +9,11 @@ def checkTemp(sense):
 	array2 = array1[1].split("'")
 	cpuTempFloat = float(array2[0])
 	temp = sense.get_temperature()
-	actualTemp = temp - ((cpuTempFloat - temp)/1.4)
+	actualTemp = temp - ((cpuTempFloat - temp)/1.4) #the formula to derrive temp
 	return actualTemp
 
 def displayTemp(sense, temp, reader):
-	color = reader.checkComfort(temp)
+	color = reader.checkComfort(temp) #determines the color of the display
 	temp = round(temp,1)
 	sense.show_message(str(temp),text_colour=color)
 
