@@ -41,10 +41,10 @@ class Emoji:
     #display emojis in order
     def __getScreen(self):
         array = [1,2,3]
-        if(__iterator > 2):
-            __iterator = 0
-        num = array[__iterator]
-        __iterator += 1
+        if(self.__iterator > 2):
+            self.__iterator = 0
+        num = array[self.__iterator]
+        self.__iterator += 1
         if num == 1:
             self.__matrix = Screens.getScreenOne(self.__color)
         elif num == 2:
