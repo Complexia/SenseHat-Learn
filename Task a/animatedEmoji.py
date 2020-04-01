@@ -18,16 +18,33 @@ class Emoji:
     def __init__(self):
         self.__sense = SenseHat()
         self.__matrix = []
+        self.__iterator = 0
 
     def setColor(self, colorTuple : tuple):
         self.__color = colorTuple
 
     def display(self):
-        self.__getRandomScreen()
+        #self.__getRandomScreen()
+        self.__getScreen()
         self.__sense.set_pixels(self.__matrix)
 
+    #display emojis in random order
     def __getRandomScreen(self):
         num = randrange(1, 4)
+        if num == 1:
+            self.__matrix = Screens.getScreenOne(self.__color)
+        elif num == 2:
+            self.__matrix = Screens.getScreenTwo(self.__color)
+        else:
+            self.__matrix = Screens.getScreenThree(self.__color)
+
+    #display emojis in order
+    def getScreen(self):
+        array = [1,2,3]
+        if(__iterator > 2):
+            __iterator = 0
+        num = array[__iterator]
+        __iterator += 1
         if num == 1:
             self.__matrix = Screens.getScreenOne(self.__color)
         elif num == 2:
