@@ -9,6 +9,9 @@ def main():
         emoji.setColor((0, 255, 0))
         emoji.display()
         sleep(3)
+        emoji.clear()
+        sleep(0.5)
+
     
 
 class Emoji:
@@ -31,6 +34,9 @@ class Emoji:
             self.__matrix = Screens.getScreenTwo(self.__color)
         else:
             self.__matrix = Screens.getScreenThree(self.__color)
+
+    def clear(self):
+        self.__sense.clear();
 
 
 
