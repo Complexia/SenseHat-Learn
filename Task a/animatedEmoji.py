@@ -39,7 +39,7 @@ class Emoji:
             self.__matrix = Screens.getScreenThree(self.__color)
 
     #display emojis in order
-    def getScreen(self):
+    def __getScreen(self):
         array = [1,2,3]
         if(__iterator > 2):
             __iterator = 0
