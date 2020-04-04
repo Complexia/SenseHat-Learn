@@ -19,8 +19,8 @@ class Screens():
 
     @staticmethod
     def getScreenTwo(c):
-        a = (255,102,178) #mouth
-        b = (255, 255, 0) #eyes
+        a = (0,255,255) #mouth
+        b = (255, 128, 0) #eyes
         d = (255,51,51) #nose
         
         return [
