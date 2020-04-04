@@ -41,10 +41,10 @@ class Screens():
         d = (255,0,0) #tears
         return [
             c, c, c, c, c, c, c, c,
-            c, c, b, c, c, b, c, c,
-            c, b, c, c, c, c, b, c,
+            c, b, b, c, c, b, b, c,
             c, d, c, c, c, c, d, c,
             c, d, c, c, c, c, d, c,
+            c, c, c, c, c, c, c, c,
             c, c, a, a, a, a, c, c,
             c, a, c, c, c, c, a, c,
             c, c, c, c, c, c, c, c
