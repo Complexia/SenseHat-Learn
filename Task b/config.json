@@ -1,6 +1,6 @@
 {
-	"cold_max" : 10,
-	"comfortable_min" : 10,
-	"comfortable_max" : 25,
-	"hot_min" : 25
+	"cold_max" : 25,
+	"comfortable_min" : 25,
+	"comfortable_max" : 35,
+	"hot_min" : 45
 }
